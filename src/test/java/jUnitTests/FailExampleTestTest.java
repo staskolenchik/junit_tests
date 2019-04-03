@@ -8,8 +8,6 @@ import java.util.List;
 
 import static java.util.Arrays.asList;
 import static org.hamcrest.Matchers.*;
-import static org.hamcrest.Matchers.hasItem;
-import static org.junit.Assert.*;
 
 public class FailExampleTestTest {
 
@@ -34,6 +32,7 @@ public class FailExampleTestTest {
         List<String> list = asList("A", "*", "Y");
         list.subList(1,3);
         Assert.assertThat(list, anyOf(allOf(hasItem("X"), not(hasItem("Y"))), allOf(not(hasItem("X")), hasItem("Y"))));
+        //new commit
     }
 
 }
