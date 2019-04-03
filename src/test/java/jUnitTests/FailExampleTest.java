@@ -34,6 +34,5 @@ class FailExampleTest {
 
         Assert.assertThat(list, anyOf(allOf(hasItem("A"), not("Y")), allOf(not(hasItem("A")), hasItem("Y"))));
 
-        Assert.assertThat(list, anyOf(allOf(hasItem("A"), not("X")), allOf(not(hasItem("A")), hasItem("X"))));
     }
 }
