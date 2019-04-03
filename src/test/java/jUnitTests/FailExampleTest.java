@@ -31,5 +31,7 @@ class FailExampleTest {
     public void test_list_has_only_X_or_Y() {
         List<String> list = asList("A", "X", "Y");
         Assert.assertThat(list, anyOf(allOf(hasItem("X"), not("Y")), allOf(not(hasItem("X")), hasItem("Y"))));
+
+        Assert.assertThat(list, anyOf(allOf(hasItem("A"), not("Y")), allOf(not(hasItem("A")), hasItem("Y"))));
     }
 }
